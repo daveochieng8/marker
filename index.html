@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coffee Shops</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+        <style>
+        
+            #map {position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
+        </style>
+    
+    </head>
+    <body >
+
+        <div id="map"></div>
+        <script>
+             var map = L.map('map').setView([-0.28333,36.06667], 15);
+             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+
+}).addTo(map);
+     var marker = L.marker([-0.28950,36.06667]).bindPopup('Suzzie Coffee Shop').addTo(map);
+           
+        </script>
+    </body>
+</html>
